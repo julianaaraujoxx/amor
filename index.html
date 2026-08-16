@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Área Secreta</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- FUNDO -->
+    <div class="stars"></div>
+
+    <!-- TELA DE LOGIN -->
+    <main class="login-screen" id="loginScreen">
+
+        <div class="login-card">
+
+            <div class="lock">
+                🔐
+            </div>
+
+            <p class="small-title">
+                ACESSO RESTRITO
+            </p>
+
+            <h1>
+                Área Secreta
+            </h1>
+
+            <p class="description">
+                Este lugar foi feito exclusivamente para você.
+            </p>
+
+            <div class="input-area">
+
+                <input
+                    type="password"
+                    id="password"
+                    placeholder="Digite a senha"
+                    autocomplete="off"
+                >
+
+                <button onclick="checkPassword()">
+                    ENTRAR
+                </button>
+
+            </div>
+
+            <p id="errorMessage"></p>
+
+            <span class="hint">
+                💛 Somente uma pessoa sabe a senha.
+            </span>
+
+        </div>
+
+    </main>
+
+
+    <!-- SITE PRINCIPAL -->
+    <main class="secret-site" id="secretSite">
+
+        <header>
+
+            <div class="logo">
+                Para<span>O</span>Amor da minha vida
+            </div>
+
+            <button class="logout-button" onclick="lockSite()">
+                🔒 Bloquear
+            </button>
+
+        </header>
+
+
+        <!-- HERO -->
+        <section class="hero">
+
+            <p class="gold-text">
+                ACESSO CONCEDIDO
+            </p>
+
+            <h1>
+                Bem-vinda,<br>
+                <span>Beatryz.</span>
+            </h1>
+
+            <p>
+                Você encontrou um pequeno pedaço do meu coração.
+            </p>
+
+            <button class="gold-button" onclick="scrollToSection('memories')">
+                EXPLORAR
+                <span>↓</span>
+            </button>
+
+        </section>
+
+
+        <!-- MEMÓRIAS -->
+        <section class="section" id="memories">
+
+            <p class="section-label">
+                01 — MEMÓRIAS
+            </p>
+
+            <h2>
+                Algumas coisas<br>
+                para serem sempre ditas.
+            </h2>
+
+            <div class="memory-grid">
+
+                <div class="memory-card">
+                    <span>01</span>
+                    <h3>AMOR DA MINHA VIDA</h3>
+                    <p>
+                        você sempre será tudo para mim.
+                    </p>
+                </div>
+
+                <div class="memory-card">
+                    <span>02</span>
+                    <h3>Eterna namorada</h3>
+                    <p>
+                        logo logo nos casamos!
+                    </p>
+                </div>
+
+                <div class="memory-card">
+                    <span>03</span>
+                    <h3>MÃE DOS MEUS FILHOS</h3>
+                    <p>
+                        Eles nem vieram mas aposto que já te amam.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- CARTA -->
+        <section class="letter-section">
+
+            <p class="section-label">
+                02 — UMA CARTA
+            </p>
+
+            <h2>
+                Abra quando<br>
+                quiser lembrar de mim.
+            </h2>
+
+            <button class="letter-button" onclick="openLetter()">
+                💌 ABRIR CARTA
+            </button>
+
+        </section>
+
+
+        <!-- FUTURO -->
+        <section class="future-section">
+
+            <p class="section-label">
+                03 — O FUTURO
+            </p>
+
+            <h2>
+                Isso aqui ainda<br>
+                está só começando.
+            </h2>
+
+            <div class="future-line">
+
+                <div>
+                    <span>01</span>
+                    <h3>Nós</h3>
+                </div>
+
+                <div>
+                    <span>02</span>
+                    <h3>Novas histórias</h3>
+                </div>
+
+                <div>
+                    <span>03</span>
+                    <h3>Novos lugares</h3>
+                </div>
+
+                <div>
+                    <span>∞</span>
+                    <h3>O que vier</h3>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- FINAL -->
+        <section class="final-section">
+
+            <div class="final-content">
+
+                <p>
+                    Para a pessoa que encontrou<br>
+                    o caminho até aqui.
+                </p>
+
+                <h2>
+                    Beatryz
+                </h2>
+
+                <div class="line"></div>
+
+                <span>
+                    Esse site termina aqui.<br>
+                    Mas a nossa história não.
+                </span>
+
+            </div>
+
+        </section>
+
+
+        <footer>
+            Feito especialmente para Beatryz ♥
+        </footer>
+
+    </main>
+
+
+    <!-- MODAL DA CARTA -->
+    <div class="modal" id="letterModal">
+
+        <div class="letter">
+
+            <button class="close" onclick="closeLetter()">
+                ×
+            </button>
+
+            <p class="letter-small">
+                PARA VOCÊ
+            </p>
+
+            <h2>
+                Meu bebê pequeno,
+            </h2>
+
+            <p>
+                Se você chegou até aqui, significa que conseguiu entrar
+                no meu pequeno segredo.
+            </p>
+
+            <p>
+                Eu poderia escrever mil coisas aqui, mas talvez nenhuma
+                delas consiga explicar completamente o quanto você é
+                importante para mim e o quanto eu te amo.
+            </p>
+
+            <p>
+                Então fiz esse pequeno lugar para guardar algumas coisas
+                que eu nunca quero esquecer, vou construindo ele aos poucos para nós.
+            </p>
+
+            <p>
+                E talvez, daqui a alguns anos, a gente volte aqui e veja
+                tudo isso juntas.
+                HAHAHAHAHA quem manda casar com alguém technology, sou capaz de 
+                até criar um site para vc...
+            </p>
+
+            <strong>
+                Eu te amo. ❤️
+            </strong>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
