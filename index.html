@@ -5,22 +5,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Área Secreta</title>
+    <title>Área Secreta — Bioca & Juli</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- FUNDO -->
+    <!-- =========================================
+         FUNDO
+    ========================================== -->
+
     <div class="stars"></div>
 
-    <!-- TELA DE LOGIN -->
+
+    <!-- =========================================
+         MÚSICA
+    ========================================== -->
+
+    <audio id="backgroundMusic" loop>
+        <source src="nossa-musica2.mp3" type="audio/mpeg">
+    </audio>
+
+
+    <!-- =========================================
+         TELA DE LOGIN
+    ========================================== -->
+
     <main class="login-screen" id="loginScreen">
 
         <div class="login-card">
@@ -67,8 +85,16 @@
     </main>
 
 
-    <!-- SITE PRINCIPAL -->
+    <!-- =========================================
+         SITE PRINCIPAL
+    ========================================== -->
+
     <main class="secret-site" id="secretSite">
+
+
+        <!-- =====================================
+             HEADER
+        ====================================== -->
 
         <header>
 
@@ -76,14 +102,32 @@
                 Bioca<span>&</span>Juli
             </div>
 
-            <button class="logout-button" onclick="lockSite()">
-                🔒 Bloquear
-            </button>
+            <div class="header-actions">
+
+                <button
+                    class="music-button"
+                    id="musicButton"
+                    onclick="toggleMusic()"
+                >
+                    🎵 Música
+                </button>
+
+                <button
+                    class="logout-button"
+                    onclick="lockSite()"
+                >
+                    🔒 Bloquear
+                </button>
+
+            </div>
 
         </header>
 
 
-        <!-- HERO -->
+        <!-- =====================================
+             HERO
+        ====================================== -->
+
         <section class="hero">
 
             <p class="gold-text">
@@ -99,7 +143,10 @@
                 Você encontrou um pequeno pedaço do meu coração.
             </p>
 
-            <button class="gold-button" onclick="scrollToSection('memories')">
+            <button
+                class="gold-button"
+                onclick="scrollToSection('countdown')"
+            >
                 EXPLORAR
                 <span>↓</span>
             </button>
@@ -107,7 +154,115 @@
         </section>
 
 
-        <!-- MEMÓRIAS -->
+        <!-- =====================================
+             CONTAGEM REGRESSIVA
+        ====================================== -->
+
+        <section class="countdown-section" id="countdown">
+
+            <div class="countdown-content">
+
+                <p class="section-label">
+                    00 — SUA PRA SEMPRE!
+                </p>
+
+                <h2>
+                    Falta pouco para<br>
+                    <span>o nosso próximo capítulo.</span>
+                </h2>
+
+                <p class="countdown-description">
+                    Uma contagem regressiva para o dia
+                    que vai marcar o começo de uma nova fase.
+                </p>
+
+
+                <div class="countdown">
+
+                    <div class="time-box">
+
+                        <span id="days">
+                            00
+                        </span>
+
+                        <small>
+                            DIAS
+                        </small>
+
+                    </div>
+
+
+                    <div class="time-separator">
+                        :
+                    </div>
+
+
+                    <div class="time-box">
+
+                        <span id="hours">
+                            00
+                        </span>
+
+                        <small>
+                            HORAS
+                        </small>
+
+                    </div>
+
+
+                    <div class="time-separator">
+                        :
+                    </div>
+
+
+                    <div class="time-box">
+
+                        <span id="minutes">
+                            00
+                        </span>
+
+                        <small>
+                            MINUTOS
+                        </small>
+
+                    </div>
+
+
+                    <div class="time-separator">
+                        :
+                    </div>
+
+
+                    <div class="time-box">
+
+                        <span id="seconds">
+                            00
+                        </span>
+
+                        <small>
+                            SEGUNDOS
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <div class="trip-date">
+
+                    ✈️ 17 DE SETEMBRO DE 2026
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             MEMÓRIAS
+        ====================================== -->
+
         <section class="section" id="memories">
 
             <p class="section-label">
@@ -119,30 +274,58 @@
                 para serem sempre ditas.
             </h2>
 
+
             <div class="memory-grid">
 
-                <div class="memory-card">
-                    <span>01</span>
-                    <h3>vOCE É O AMOR DA MINHA VIDA</h3>
-                    <p>
-                        meu sonho realizado.
-                    </p>
-                </div>
 
                 <div class="memory-card">
-                    <span>02</span>
-                    <h3>ETERNA NAMORADA</h3>
+
+                    <span>
+                        01
+                    </span>
+
+                    <h3>
+                        VOCÊ É O AMOR DA MINHA VIDA
+                    </h3>
+
                     <p>
-                        logo logo nos casamos!
+                        Meu sonho realizado.
                     </p>
+
                 </div>
 
+
                 <div class="memory-card">
-                    <span>03</span>
-                    <h3>MÃE DOS MEUS FILHOS</h3>
+
+                    <span>
+                        02
+                    </span>
+
+                    <h3>
+                        ETERNA NAMORADA
+                    </h3>
+
                     <p>
-                        eles nem vieram ainda mas aposto que já te amam.
+                        Logo logo nos casamos!
                     </p>
+
+                </div>
+
+
+                <div class="memory-card">
+
+                    <span>
+                        03
+                    </span>
+
+                    <h3>
+                        MÃE DOS MEUS FILHOS
+                    </h3>
+
+                    <p>
+                        Eles nem vieram ainda mas aposto que já te amam.
+                    </p>
+
                 </div>
 
             </div>
@@ -150,11 +333,254 @@
         </section>
 
 
-        <!-- CARTA -->
+        <!-- =====================================
+             JOGO
+        ====================================== -->
+
+        <section class="game-section">
+
+            <div class="game-heading">
+
+                <p class="section-label">
+                    02 — ÁREA DE DIVERSÃO
+                </p>
+
+                <h2>
+                    Enquanto a viagem<br>
+                    não chega...
+                </h2>
+
+                <p>
+                    Joga um pouquinho, folgada. 🎮
+                </p>
+
+            </div>
+
+
+            <div class="game-wrapper">
+
+
+                <div class="game-top">
+
+                    <div>
+                        <span>
+                            PONTOS
+                        </span>
+
+                        <strong id="score">
+                            0
+                        </strong>
+                    </div>
+
+
+                    <div>
+                        <span>
+                            MOEDAS
+                        </span>
+
+                        <strong id="coins">
+                            0
+                        </strong>
+                    </div>
+
+
+                    <div>
+                        <span>
+                            VIDAS
+                        </span>
+
+                        <strong id="lives">
+                            ❤️❤️❤️
+                        </strong>
+                    </div>
+
+                </div>
+
+
+                <div
+                    class="game"
+                    id="game"
+                    tabindex="0"
+                >
+
+                    <div class="game-sky"></div>
+
+                    <div class="moon"></div>
+
+
+                    <!-- NUVENS -->
+
+                    <div class="cloud cloud-1"></div>
+                    <div class="cloud cloud-2"></div>
+                    <div class="cloud cloud-3"></div>
+
+
+                    <!-- MOEDAS -->
+
+                    <div
+                        class="coin"
+                        data-collected="false"
+                        style="left: 28%; bottom: 170px;"
+                    >
+                        ✦
+                    </div>
+
+                    <div
+                        class="coin"
+                        data-collected="false"
+                        style="left: 48%; bottom: 250px;"
+                    >
+                        ✦
+                    </div>
+
+                    <div
+                        class="coin"
+                        data-collected="false"
+                        style="left: 70%; bottom: 170px;"
+                    >
+                        ✦
+                    </div>
+
+
+                    <!-- PLATAFORMAS -->
+
+                    <div
+                        class="platform platform-1"
+                        style="left: 0; bottom: 0; width: 100%;"
+                    ></div>
+
+                    <div
+                        class="platform platform-2"
+                        style="left: 25%; bottom: 115px; width: 180px;"
+                    ></div>
+
+                    <div
+                        class="platform platform-3"
+                        style="left: 48%; bottom: 195px; width: 180px;"
+                    ></div>
+
+                    <div
+                        class="platform platform-4"
+                        style="left: 70%; bottom: 115px; width: 180px;"
+                    ></div>
+
+
+                    <!-- OBSTÁCULOS -->
+
+                    <div
+                        class="enemy enemy-1"
+                        style="left: 42%;"
+                    >
+                        👾
+                    </div>
+
+                    <div
+                        class="enemy enemy-2"
+                        style="left: 76%;"
+                    >
+                        👾
+                    </div>
+
+
+                    <!-- JOGADORA -->
+
+                    <div id="player" class="player">
+
+                        <div class="player-hair"></div>
+
+                        <div class="player-face">
+                            <span class="eye left"></span>
+                            <span class="eye right"></span>
+                        </div>
+
+                        <div class="player-body"></div>
+
+                        <div class="player-leg left"></div>
+                        <div class="player-leg right"></div>
+
+                    </div>
+
+
+                    <!-- CHEGADA -->
+
+                    <div class="flag">
+
+                        <div class="flag-pole"></div>
+
+                        <div class="flag-top">
+                            💛
+                        </div>
+
+                    </div>
+
+
+                    <div class="game-message" id="gameMessage">
+
+                        <div>
+
+                            <h3>
+                                PRONTA?
+                            </h3>
+
+                            <p>
+                                Chegue até o coração dourado.
+                            </p>
+
+                            <button onclick="startGame()">
+                                JOGAR
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="game-controls">
+
+                    <button
+                        onclick="moveLeft()"
+                        aria-label="Andar para esquerda"
+                    >
+                        ←
+                    </button>
+
+                    <button
+                        onclick="jump()"
+                        aria-label="Pular"
+                    >
+                        ↑
+                    </button>
+
+                    <button
+                        onclick="moveRight()"
+                        aria-label="Andar para direita"
+                    >
+                        →
+                    </button>
+
+                </div>
+
+
+                <p class="game-help">
+                    Use <strong>←</strong> <strong>→</strong> para andar
+                    e <strong>ESPAÇO</strong> para pular.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             CARTA
+        ====================================== -->
+
         <section class="letter-section">
 
             <p class="section-label">
-                02 — UMA CARTA
+                03 — UMA CARTA
             </p>
 
             <h2>
@@ -162,18 +588,24 @@
                 quiser lembrar de mim.
             </h2>
 
-            <button class="letter-button" onclick="openLetter()">
+            <button
+                class="letter-button"
+                onclick="openLetter()"
+            >
                 💌 ABRE FOLGADA
             </button>
 
         </section>
 
 
-        <!-- FUTURO -->
+        <!-- =====================================
+             FUTURO
+        ====================================== -->
+
         <section class="future-section">
 
             <p class="section-label">
-                03 — O FUTURO
+                04 — O FUTURO
             </p>
 
             <h2>
@@ -181,26 +613,58 @@
                 está só começando.
             </h2>
 
+
             <div class="future-line">
 
                 <div>
-                    <span>01</span>
-                    <h3>Nós</h3>
+
+                    <span>
+                        01
+                    </span>
+
+                    <h3>
+                        Nós
+                    </h3>
+
                 </div>
 
-                <div>
-                    <span>02</span>
-                    <h3>Nossa familia</h3>
-                </div>
 
                 <div>
-                    <span>03</span>
-                    <h3>Novos lugares</h3>
+
+                    <span>
+                        02
+                    </span>
+
+                    <h3>
+                        Nossa família
+                    </h3>
+
                 </div>
 
+
                 <div>
-                    <span>∞</span>
-                    <h3>O que vier</h3>
+
+                    <span>
+                        03
+                    </span>
+
+                    <h3>
+                        Novos lugares
+                    </h3>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        ∞
+                    </span>
+
+                    <h3>
+                        O que vier
+                    </h3>
+
                 </div>
 
             </div>
@@ -208,7 +672,10 @@
         </section>
 
 
-        <!-- FINAL -->
+        <!-- =====================================
+             FINAL
+        ====================================== -->
+
         <section class="final-section">
 
             <div class="final-content">
@@ -235,18 +702,30 @@
 
 
         <footer>
-            Direitos autorais: Melhor namorada do mundo!
+
+            Direitos autorais:
+            Melhor namorada do mundo! ❤️
+
         </footer>
 
     </main>
 
 
-    <!-- MODAL DA CARTA -->
-    <div class="modal" id="letterModal">
+    <!-- =========================================
+         MODAL DA CARTA
+    ========================================== -->
+
+    <div
+        class="modal"
+        id="letterModal"
+    >
 
         <div class="letter">
 
-            <button class="close" onclick="closeLetter()">
+            <button
+                class="close"
+                onclick="closeLetter()"
+            >
                 ×
             </button>
 
@@ -259,7 +738,8 @@
             </h2>
 
             <p>
-                Enquanto vc dorme, eu procuro maneiras de me declarar kkkkkk.
+                Enquanto vc dorme, eu procuro maneiras de me declarar
+                kkkkkk.
             </p>
 
             <p>
@@ -270,14 +750,15 @@
 
             <p>
                 Então fiz esse pequeno lugar para guardar algumas coisas
-                que eu nunca quero esquecer, vou construindo ele aos poucos para nós.
+                que eu nunca quero esquecer. Vou construindo ele aos poucos
+                para nós.
             </p>
 
             <p>
                 E talvez, daqui a alguns anos, a gente volte aqui e veja
                 tudo isso juntas.
-                HAHAHAHAHA quem manda casar com alguém technology, sou capaz de 
-                até criar um site para vc...
+                HAHAHAHAHA quem manda casar com alguém technology,
+                sou capaz de até criar um site para vc...
             </p>
 
             <strong>
